@@ -10,7 +10,7 @@ services:
         image: foxylion/jenkins
     jenkins-slave:
         container_name: jenkins-slave
-        restart: unless-stopped
+        restart: always
         volumes:
             - '/home/jenkins:/home/jenkins'
             - '/var/run/docker.sock:/var/run/docker.sock'
