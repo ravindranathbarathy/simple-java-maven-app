@@ -1,10 +1,10 @@
 general:
  project_name: Helloworld
- project_technology: Nodejs
+ project_technology: java
 scm:
  scm_type: git
- provision: true
- repo_name: HelloWorld
+ provision: false
+ repo_url: https://github.com/ravindranathbarathy/simple-java-maven-app.git
  repo_type: public
 build:
  build_tool: jenkins
