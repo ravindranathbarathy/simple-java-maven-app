@@ -17,5 +17,5 @@ services:
         environment:
             - 'JENKINS_URL=http://ucp00000234'
         image: foxylion/jenkins-slave
-        links:
+        depends_on:
             - jenkins
