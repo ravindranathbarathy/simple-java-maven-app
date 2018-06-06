@@ -1,25 +1,23 @@
 general:
- project_name: Helloworld
- project_technology: java
-scm:
- scm_type: git
- provision: false
- repo_url: https://github.com/ravindranathbarathy/simple-java-maven-app.git
- repo_type: public
+  project_name: Helloworld
+  project_technology: java
 build:
- build_tool: jenkins
- provision: true
- jenkins_infra_provision:
-  provision: true
- compile:
- unit_test:
- static_scan:
-publish:
+  - job:
+      name: simple-java-maven-app
+      project-type: pipeline
+      sandbox: true
+      pipeline-scm:
+        scm:
+          - hg:
+              url: https://github.com/ravindranathbarathy/simple-java-maven-app.git
+              clean: true
+        script-path: ./jenkins/Jenkinsfile
+        lightweight-checkout: true
 deploy:
- env:
-  dev:
-   runtime_infra_provision:
+  env:
+    dev:
+    runtime_infra_provision:
+      provision: true
+  test:
+    runtime_infra_provision:
     provision: true
- test:
-  runtime_infra_provision:
-   provision: true
