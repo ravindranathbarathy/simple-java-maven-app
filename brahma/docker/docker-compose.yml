@@ -12,7 +12,7 @@ services:
         container_name: jenkins-slave
         restart: always
         volumes:
-            - '/home/jenkins:/home/bar9122/jenkins'
+            - '/home/jenkins:/home/jenkins'
             - '/var/run/docker.sock:/var/run/docker.sock'
         environment:
             - 'JENKINS_URL=http://ucp00000234'
