@@ -6,7 +6,7 @@ services:
             - '80:8080'
             - '50000:50000'
         volumes:
-            - '/home/bar9122/jenkins_home:/var/jenkins_home'
+            - '/home/jenkins:/var/jenkins_home'
         image: foxylion/jenkins
     jenkins-slave:
         container_name: jenkins-slave
