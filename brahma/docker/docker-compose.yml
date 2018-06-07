@@ -6,13 +6,13 @@ services:
             - '80:8080'
             - '50000:50000'
         volumes:
-            - '/home/bar9122/jenkins_home:/var/lib/jenkins'
+            - '/home/bar9122/jenkins_home:/var/jenkins_home'
         image: foxylion/jenkins
     jenkins-slave:
         container_name: jenkins-slave
         restart: always
         volumes:
-            - '/home/jenkins:/home/jenkins'
+            - '/home/bar9122/jenkins_slave:/home/jenkins'
             - '/var/run/docker.sock:/var/run/docker.sock'
         environment:
             - 'JENKINS_URL=http://ucp00000234'
