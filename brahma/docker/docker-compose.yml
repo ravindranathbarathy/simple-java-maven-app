@@ -13,7 +13,7 @@ services:
             - '/home/barathy/jenkins_slave:/home/jenkins'
             - '/var/run/docker.sock:/var/run/docker.sock'
         environment:
-            - 'JENKINS_URL=http://ucp00000234'
+            - 'JENKINS_URL=http://test'
         image: foxylion/jenkins-slave
         depends_on:
             - jenkins
